@@ -1,3 +1,6 @@
+#Package Delivery Detector
+#Using Arduino and Raspberry Pi 
+
 #include <SPI.h>
 #include <Ethernet.h>
 #define THRESHOLD 300
