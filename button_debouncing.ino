@@ -2,24 +2,23 @@
 int buttonPin = A0;
 
 void setup() {
-    // Establish the Serial connection with a baud rate of 9600 
-  Serial.begin(9600);
+   Serial.begin(9600);
 }
 
 void loop(){
-  // Read the value of the input. It can vary from 0 - 1023
+  // Read the value of the input; vary from 0 - 1023
   int buttonValue = analogRead(buttonPin);
     if (buttonValue < 100){
-    // A value under 200 represents no button pushed
+    // A value under 100 represents no button pushed
     Serial.println("0");
   } else if (buttonValue >= 100 && buttonValue < 200){
-    // A value between 200 - 300 represents the third button
+    // A value between 100 - 200 represents the third button
     Serial.println("S3");
   } else if (buttonValue >= 200 && buttonValue < 300){
-    // A value between 300 - 400 represents the second button
+    // A value between 200 - 300 represents the second button
     Serial.println("S2");
   } else if (buttonValue >= 300){
-    // A value greater than 400 represents the first button
+    // A value greater than 300 represents the first button
     Serial.println("S1");
   }
 
