@@ -1,11 +1,9 @@
 // Declare the LEDs in an array
 int LED [5] = {2, 3, 4, 5, 6};
-int sensorPin = A0; // Declare the used sensor pin
+int sensorPin = A0; 
 
 void setup(){
-   // Start the Serial connection
-  Serial.begin(9600); 
-  // Set all LEDs as OUTPUTS 
+   Serial.begin(9600); 
   for (int i = 0; i < 5; i++){
     pinMode(LED[i], OUTPUT);
   }
@@ -44,5 +42,5 @@ void loop(){
     digitalWrite( LED[3], HIGH);
     digitalWrite( LED[4], HIGH);
   }
-  delay(100); // Small delay for the Serial to send
+  delay(100); // delay for the Serial to send
 }
